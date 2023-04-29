@@ -19,10 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-const tours = JSON.parse(
-  fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
-);
-
 // Routes
 app.use('/api/v1/tours', tourRouter); // this is called mounting of routers
 app.use('/api/v1/users', useRouter);
